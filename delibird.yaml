@@ -8,3 +8,7 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${random.value}
     lease-renewal-interval-in-seconds: 1  # 실제 서비스 시에 제거
     lease-expiration-duration-in-seconds: 2  # 실제 서비스 시에 제거
+
+token:
+  secret: '{cipher}d23d852d79717e1d650260c35219f86be525530721d8a36b7d5708520eb80e7017cd3238881379a74fbc75dd9dbd2258df2b9b30b9f2a32258642dc6b3086ab9b703789d6c923ecc37eca70479b2bb9e'
+  expiration_time: 3600000
