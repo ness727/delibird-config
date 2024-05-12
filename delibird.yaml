@@ -18,3 +18,6 @@ client:
 
 gateway:
   address: http://localhost:8000
+
+login-service:
+  address: http://localhost:8080
