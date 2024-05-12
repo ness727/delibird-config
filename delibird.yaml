@@ -12,3 +12,6 @@ eureka:
 token:
   secret: '{cipher}d23d852d79717e1d650260c35219f86be525530721d8a36b7d5708520eb80e7017cd3238881379a74fbc75dd9dbd2258df2b9b30b9f2a32258642dc6b3086ab9b703789d6c923ecc37eca70479b2bb9e'
   expiration_time: 3600000
+
+client:
+  address: http://localhost:3000
