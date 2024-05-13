@@ -29,7 +29,7 @@ services:
       - config-service
       - service-discovery
     environment:
-      spring.config.import: optional:configserver:http://config-server:8888
+      spring.config.import: optional:configserver:http://config-service:8888
 
   login-service:
     image: ness727/login-service:1.0
@@ -40,7 +40,7 @@ services:
     networks:
       - my-network
     environment:
-      spring.config.import: optional:configserver:http://config-server:8888
+      spring.config.import: optional:configserver:http://config-service:8888
 
 networks:
   my-network:
