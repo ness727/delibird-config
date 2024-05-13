@@ -52,6 +52,7 @@ services:
       - my-network
     environment:
       spring.config.import: optional:configserver:http://config-service:8888
+      spring.cloud.config.profile: defualt
 
 networks:
   my-network:
