@@ -33,6 +33,8 @@ services:
 
   login-service:
     image: ness727/login-service:1.0
+    container_name: login-service
+    hostname: login-service
     depends_on:
       - gateway-service
     networks:

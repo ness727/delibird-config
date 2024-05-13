@@ -10,8 +10,8 @@ spring:
             scope:
               - name
               - email
-            client-id: '{cipher}fb19b09077b3961635c844b9f219e872f7b8e7b723a3154f5cca1993018f03aacb07fc0e29b65f2226b85360189a623c'
-            client-secret: '{cipher}498f0b29e6d07ecf6add3a0695c35a564fb2dc1f134a3e5d9961b4e864b68643'
+            client-id: '{cipher}04be0ed3366b300976131deeeaea6b2567ad5d1abbee01a4d5db208728fec6b36346daf76f381aa1617bd9cc9424815b'
+            client-secret: '{cipher}1d97e74b86d4588471802ab84b29de1a053daa0858aca96d912b0fa7d32faa59'
           kakao:
             client-name: kakao
             redirect-uri: http://localhost:8080/login/oauth2/code/kakao
@@ -20,8 +20,8 @@ spring:
             scope:
               - profile_nickname
               - account_email
-            client-id: '{cipher}715c53a78ac37c773b165789b3c106db6a01969b1c6d30d1e93634200e0d67223ff1fc0842a4471f15f35d6e76a54a7612357e6ca1a7866039a6a42eec3bbd14'
-            client-secret: '{cipher}f8f1bfcc789fc3af4aeba5252beaba5d57653f01230b2fdb848b2d62e665324c257e250e4cff54de373a6e6604f3174b6c0f06f4ea3096da7adb5b6778e2d4fc'
+            client-id: '{cipher}4f63a512bfdd9a6e3570c70df5f17b4986727f2e28dfa7afca477b51b38e66fbba5f47e4010e3d589b0e86c53708de0a3c91a0ea7a6267158ff7061c683e51df'
+            client-secret: '{cipher}9681dd084555e719ff8c91dc7ad19e065f09637c0a3da8b824975789c656fbd38652444caab6f0815172765f3ac10f739769f8101e94ec6f6529eebad1609537'
           google:
             client-name: google
             redirect-uri: http://localhost:8080/login/oauth2/code/google
@@ -29,8 +29,8 @@ spring:
             scope:
               - profile
               - email
-            client-id: '{cipher}ef3e4bf0fad021fdb57bf6adc5558f738c4f4c9bbd1c9433ec9b3799538e75f0345adecedd7c1e239d8289fc5f32335fc21773edc039956eeb2b3292431f867f116fb1eaf10adc7bade1bc1417c4deb539475302c0392bca200e31e6945dbd95'
-            client-secret: '{cipher}f2323e7fa9297b4060ee727bc95ef36bc40a05d448b3e0f813e3c157c48db617f4ad2c5f654c3b5379ca57f84de58ab9e12722009cbd3f9b7b0443a97fd1992d'
+            client-id: '{cipher}f9f0eb3ac8b778e333dbfc0b67e9286f623023b25f30f43521fda44e2868dd28c266e0be8858ab2caaffac9c9349413d4322ad86503508e2411c1549de964a9dfb0412a5bb8bc78b1942e8766e6304acc196783dfddeef321c282aba670f0ec0'
+            client-secret: '{cipher}3a9ecccaf0a3172dd373fcde4bdb273ac6b1f7fcd4e288346340ec2a90e1b91e9028a2fc3488e7fde43d668076f63a4c5843cba540d697f74a65f6a34d6b4a94'
         provider: #provider
           naver:
             authorization-uri: https://nid.naver.com/oauth2.0/authorize
