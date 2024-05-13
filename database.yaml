@@ -1,6 +1,6 @@
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/delibird?characterEncoding=utf8&useUnicode=true
-    username: '{cipher}ccaa55e4397f10b3503db028a9cdbeb97ae12fc8ce693eda6f098f76ceb77f42'
-    password: '{cipher}aacb0bcc6532173a038eb02ecd2fe4216932741453c05831e171a36a7aec7667'
+    url: '{cipher}56faf909fcde36322d74ef25ef8e316a835a14913a4c05e481f1c518e2c612649408091e7fdcb8cb55dc71fc8588aa59009a0dc21f08da8de034f6f1a3d5a2861815d3650cf9ff11918758edc4c6aaca769fcb5e4ac123dd5233908f93cc1f3ad6bd9a4cd085cf07ebe5b51513909fb2dd5b273f04d6fcbf50894bd652e0e21942fed88fa192698ecbf65f516e2284cf'
+    username: '{cipher}032fbab3dc3fbb638376273fee6ddaf1f409e7ed65b4f5089ccb87c08e5cd3f2'
+    password: '{cipher}bfda30680dbbcdcbe68dc855410e1200b33d3ce4ba572036855a83593822c0f2'
