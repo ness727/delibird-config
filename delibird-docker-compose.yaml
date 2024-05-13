@@ -1,0 +1,37 @@
+services:
+  service-discovery:
+    image: ness727/service-discovery:1.0
+    ports: 
+      - "8761:8761"
+    container_name: service-discovery
+    hostname: service-discovery
+    networks:
+      - my-network
+
+  config-service:
+    image: ness727/config-service:1.0
+    ports: 
+      - "8888:8888"
+    container_name: config-service
+    hostname: config-service
+    networks: 
+      - my-network
+
+  gateway-service:
+    image: ness727/gateway-service:1.0
+    ports: 
+      - "8000:8000"
+    container_name: gateway-service
+    hostname: gateway-service
+    networks: 
+      - my-network
+    depends_on:
+      - config-service
+      - service-discovery
+    environment:
+      SPRING_CONFIG_IMPORT: 'optional:configserver:http://config-server:8888'
+
+networks:
+  my-network:
+    external: true
+    name: delibird-network
