@@ -42,6 +42,17 @@ services:
     environment:
       spring.config.import: optional:configserver:http://config-service:8888
 
+  user-service:
+    image: ness727/user-service:1.0
+    container_name: user-service
+    hostname: user-service
+    depends_on:
+      - gateway-service
+    networks:
+      - my-network
+    environment:
+      spring.config.import: optional:configserver:http://config-service:8888
+
 networks:
   my-network:
     external: true
