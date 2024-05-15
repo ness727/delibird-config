@@ -14,7 +14,7 @@ services:
       - "8888:8888"
     container_name: config-service
     hostname: config-service
-    networks: 
+    networks:
       - my-network
 
   gateway-service:
@@ -29,10 +29,13 @@ services:
       - config-service
       - service-discovery
     environment:
+      spring.cloud.config.profile: defualt
       spring.config.import: optional:configserver:http://config-service:8888
 
   login-service:
     image: ness727/login-service:1.0
+    ports:
+      - "8080:8080"
     container_name: login-service
     hostname: login-service
     depends_on:
@@ -40,6 +43,7 @@ services:
     networks:
       - my-network
     environment:
+      spring.cloud.config.profile: defualt
       spring.config.import: optional:configserver:http://config-service:8888
       spring.security.oauth2.client.registration.naver.redirect-uri: http://login-service:8080/login/oauth2/code/naver
       spring.security.oauth2.client.registration.kakao.redirect-uri: http://login-service:8080/login/oauth2/code/kakao
@@ -54,8 +58,9 @@ services:
     networks:
       - my-network
     environment:
-      spring.config.import: optional:configserver:http://config-service:8888
       spring.cloud.config.profile: defualt
+      spring.config.import: optional:configserver:http://config-service:8888
+      login-service.address: http://login-service:8080
 
 networks:
   my-network:

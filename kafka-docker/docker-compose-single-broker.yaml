@@ -7,7 +7,7 @@ services:
       - "2181:2181"
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
-      JVMFLAGS: "-Xmx256M -Xms256M"
+#      JVMFLAGS: "-Xmx256M -Xms256M"
     networks:
       my-network:
         ipv4_address: 172.18.0.100
@@ -21,7 +21,7 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://퍼블릭IP:9092
       KAFKA_CREATE_TOPICS: "test:1:1"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_HEAP_OPTS: "-Xmx256M -Xms256M"
+#      KAFKA_HEAP_OPTS: "-Xmx256M -Xms256M"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     depends_on:

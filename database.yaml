@@ -1,6 +1,6 @@
 spring:
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: '{cipher}bf7f841b11f18c8733db69ce7d9a6087d723e3cb5baf39a4390eb05e95db533fb0864fab9892b5ab37beae631e08ebafc216a5837780f283ffb655b0d03e29dd21896eb8b29e52141c0711f7a552e535b07748e8ad2b74694c537d24df08e663d3baa418b3737656f77f4a66afe3b6a8c36025cbb9b351ddda2ce5838d6d30985999b57e8c055d720cd51267d7316277'
-    username: '{cipher}032fbab3dc3fbb638376273fee6ddaf1f409e7ed65b4f5089ccb87c08e5cd3f2'
-    password: '{cipher}bfda30680dbbcdcbe68dc855410e1200b33d3ce4ba572036855a83593822c0f2'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: '{cipher}f48e5df1850d0c235cecb4db9ff6506cd11fe9d9e28d4d75d82ca9f642ab89cab1de9da6b147c2763f8945d40b9c5510ad3cfed00089a0efd0c30539768f46f5a41e9e03adfa0c0a9719269fd6de74613e2943ca87c380545735dd87f6773db6'
+    username: '{cipher}9bc09fce1a59de496bb9ebb3c6caa086f606c3b0802fb4501020963af3672a6e'
+    password: '{cipher}f04773bbd9aafa4ed009a0e12759a7dcd78e7bfde7d8afff27874752af5b73ad'
