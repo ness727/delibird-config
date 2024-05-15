@@ -18,7 +18,7 @@ token:
   expiration_time: 3600000
 
 client:
-  address: http://localhost:3000
+  address: http://gateway-service:8000/asdf
 
 gateway:
   address: http://gateway-service:8000
