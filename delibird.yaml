@@ -3,7 +3,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: 'http://eureka:8761/eureka/'
+      defaultZone: 'http://service-discovery:8761/eureka/'
   instance:
     instance-id: ${spring.cloud.client.ip-address}:${random.value}
     lease-renewal-interval-in-seconds: 1  # 실제 서비스 시에 제거
@@ -21,7 +21,7 @@ client:
   address: http://localhost:3000
 
 gateway:
-  address: http://gateway:8000
+  address: http://gateway-service:8000
 
 login-service:
   address: http://login-service:8080

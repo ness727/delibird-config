@@ -29,7 +29,7 @@ services:
       - config-service
       - service-discovery
     environment:
-      spring.cloud.config.profile: default
+      spring.profiles.active: default
       spring.config.import: optional:configserver:http://config-service:8888
 
   login-service:
@@ -43,7 +43,7 @@ services:
     networks:
       - my-network
     environment:
-      spring.cloud.config.profile: default
+      spring.profiles.active: default
       spring.config.import: optional:configserver:http://config-service:8888
       spring.security.oauth2.client.registration.naver.redirect-uri: http://login-service:8080/login/oauth2/code/naver
       spring.security.oauth2.client.registration.kakao.redirect-uri: http://login-service:8080/login/oauth2/code/kakao
@@ -58,7 +58,7 @@ services:
     networks:
       - my-network
     environment:
-      spring.cloud.config.profile: default
+      spring.profiles.active: default
       spring.config.import: optional:configserver:http://config-service:8888
       login-service.address: http://login-service:8080
 
