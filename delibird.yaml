@@ -18,7 +18,7 @@ token:
   expiration_time: 3600000
 
 client:
-  address: http://delibird.store:8000/asdf
+  address: http://delibird.store:3000/asdf
 
 gateway:
   address: http://gateway-service:8000
