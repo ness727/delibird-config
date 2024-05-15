@@ -13,11 +13,6 @@ spring:
   kafka:
     bootstrap-servers: 'http://kafka:9092'
 
-  cloud:
-    config:
-      profile: defualt
-      spring.config.import: optional:configserver:http://config-service:8888
-
 token:
   secret: '{cipher}2ed59c69ee94fcf776ee34a3260438c9d76a8200237b71b244cb2e81d122ae8cff46fde9412666e1a3488780937e4f7d'
   expiration_time: 3600000
