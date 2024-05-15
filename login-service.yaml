@@ -5,7 +5,7 @@ spring:
         registration: #registration
           naver:
             client-name: naver
-            redirect-uri: '{cipher}338224ee66cc85bc51dbe0b5f790ccf6029b748868fc7571d6bb4359f62b7e0d291dbba9b72ae8e16caf43d1cf9b709602987acd53b1cab396af4deb8ac282f40278b39bfb2660a6bf3a9b4d845d9c61'
+            redirect-uri: '{cipher}3e49e741b0b28e9fd39a3081e0bfe44043caba646dfaa75a397c3eadefe89b1bcea90b637038159c194cbab3e1e88b9915a3150e5655d950886c7375b3aaabab34deb3f0edf6a7791bb0081a0ad0c03b'
             authorization-grant-type: authorization_code
             scope:
               - name
