@@ -5,7 +5,7 @@ spring:
         registration: #registration
           naver:
             client-name: naver
-            redirect-uri: http://localhost:8080/login/oauth2/code/naver
+            redirect-uri: http://login-service:8080/login/oauth2/code/naver
             authorization-grant-type: authorization_code
             scope:
               - name
