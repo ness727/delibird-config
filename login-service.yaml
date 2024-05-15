@@ -6,7 +6,7 @@ spring:
           naver:
             client-name: naver
             # 퍼블릭 ip로 설정
-            redirect-uri: '{cipher}3e49e741b0b28e9fd39a3081e0bfe44043caba646dfaa75a397c3eadefe89b1bcea90b637038159c194cbab3e1e88b9915a3150e5655d950886c7375b3aaabab34deb3f0edf6a7791bb0081a0ad0c03b'
+            redirect-uri: 'http://delibird.store:8080/login/oauth2/code/naver'
             authorization-grant-type: authorization_code
             scope:
               - name
