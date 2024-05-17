@@ -19,9 +19,3 @@ token:
 
 client:
   address: http://delibird.store
-
-gateway:
-  address: http://gateway-service:8000
-
-login-service:
-  address: http://login-service:8080
