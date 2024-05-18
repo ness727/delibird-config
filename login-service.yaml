@@ -24,13 +24,13 @@ spring:
             client-secret: '{cipher}2a402528266f91d83143f97e9bd22296c9b40634b995830f02f01e07b6339f34145d46fcd04af1b6d8dd2d15240f9a99a4462be162c1c64873d9fc3fe2e27d09'
           google:
             client-name: google
-            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            redirect-uri: http://api.delibird.store/login/oauth2/code/google
             authorization-grant-type: authorization_code
             scope:
               - profile
               - email
-            client-id: '{cipher}f9f0eb3ac8b778e333dbfc0b67e9286f623023b25f30f43521fda44e2868dd28c266e0be8858ab2caaffac9c9349413d4322ad86503508e2411c1549de964a9dfb0412a5bb8bc78b1942e8766e6304acc196783dfddeef321c282aba670f0ec0'
-            client-secret: '{cipher}3a9ecccaf0a3172dd373fcde4bdb273ac6b1f7fcd4e288346340ec2a90e1b91e9028a2fc3488e7fde43d668076f63a4c5843cba540d697f74a65f6a34d6b4a94'
+            client-id: '{cipher}e383815beee1d90d54b13eb26de690fcce425efea050b2760e8442157893b9d964bd8505f19c0a8605baccdbdaf3f4ce332f96861fd4226d7cfa41ca7ff0f816ae011e7a5e8acfe67490c9a3a0751989c0efa161464d9d5d4d02153e7d6fccd5'
+            client-secret: '{cipher}dbf30e2771dc5ebc42d1e587c9017642b196b113e0324ac1e6af3a98265f39d86a583b277387299735bfaf01bc0a67f8733e0c186fd009906378e3060b9210e8'
         provider: #provider
           naver:
             authorization-uri: https://nid.naver.com/oauth2.0/authorize
