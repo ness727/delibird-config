@@ -11,8 +11,8 @@ spring:
             scope:
               - name
               - email
-            client-id: '{cipher}04be0ed3366b300976131deeeaea6b2567ad5d1abbee01a4d5db208728fec6b36346daf76f381aa1617bd9cc9424815b'
-            client-secret: '{cipher}1d97e74b86d4588471802ab84b29de1a053daa0858aca96d912b0fa7d32faa59'
+            client-id: '{cipher}77bef3a8b2893408a823bba9c6e7889a49b43a0b0f9642f332389eeda05f2b882e2484d3ea0d843f42ebf29cc10c1ac3'
+            client-secret: '{cipher}08e0f724ab9017a9a97f9c7d56c8159502faa5128087ad4fa2758e7bb43f4471'
           kakao:
             client-name: kakao
             # 퍼블릭 ip로 설정
