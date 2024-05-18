@@ -21,4 +21,4 @@ client:
   address: http://delibird.store
 
 cookie:
-  domain: .delibird.store
+  domain: test.delibird.store
