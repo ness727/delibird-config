@@ -25,7 +25,7 @@ token:
   expiration_time: 3600000
 
 client:
-  address: http://delibird.store/test
+  address: http://delibird.store
 
 cookie:
   domain: .delibird.store
