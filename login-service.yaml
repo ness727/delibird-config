@@ -20,7 +20,7 @@ spring:
             scope:
               - profile_nickname
               - account_email
-            client-id: '{cipher}9ae754e939838db29c5a32c77eefe441d4b4ac9a3f56360260445c88825fa25fa91c6a41df93918adec17fa8acbaa8a661c2c2aafc122417e54d762ebd4962d9'
+            client-id: '{cipher}8fd952c1a61060804aba1cb7a53096ed886a4502a47266fbe676c2f92cacbe615813b24242301ec04fa1910c7d100113a8ad078e2b837c36316ed20c1aecbc67'
             client-secret: '{cipher}d84003b7fd0d38533c632b7d46f8f4cdfdefab6f7a5259a04598508b8cde38f8277b5352364eaffe08c2f31fab543667f89a7d8aa056e953723acf8191f8c695'
           google:
             client-name: google
