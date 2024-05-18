@@ -29,8 +29,8 @@ services:
       - config-service
       - service-discovery
     environment:
+      spring.cloud.config.uri: http://config-service:8888
       spring.profiles.active: default
-      spring.config.import: optional:configserver:http://config-service:8888
 
   login-service:
     image: ness727/login-service:1.0
@@ -43,8 +43,8 @@ services:
     networks:
       - my-network
     environment:
+      spring.cloud.config.uri: http://config-service:8888
       spring.profiles.active: default
-      spring.config.import: optional:configserver:http://config-service:8888
 
   user-service:
     image: ness727/user-service:1.0
@@ -55,8 +55,8 @@ services:
     networks:
       - my-network
     environment:
+      spring.cloud.config.uri: http://config-service:8888
       spring.profiles.active: default
-      spring.config.import: optional:configserver:http://config-service:8888
 
   store-service:
     image: ness727/store-service:1.0
@@ -67,8 +67,8 @@ services:
     networks:
       - my-network
     environment:
+      spring.cloud.config.uri: http://config-service:8888
       spring.profiles.active: default
-      spring.config.import: optional:configserver:http://config-service:8888
 
 networks:
   my-network:
