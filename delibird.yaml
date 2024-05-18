@@ -19,3 +19,6 @@ token:
 
 client:
   address: http://delibird.store
+
+cookie:
+  domain: .delibird.store
