@@ -1,0 +1,5 @@
+spring:
+  data:
+    redis:
+      host: api.delibird.store
+      port: 6379
