@@ -70,6 +70,18 @@ services:
       spring.cloud.config.uri: http://config-service:8888
       spring.profiles.active: default
 
+  cart-service:
+    image: ness727/cart-service:1.0
+    container_name: cart-service
+    hostname: cart-service
+    depends_on:
+      - gateway-service
+    networks:
+      - my-network
+    environment:
+      spring.cloud.config.uri: http://config-service:8888
+      spring.profiles.active: default
+
 networks:
   my-network:
     external: true
