@@ -26,6 +26,8 @@ token:
 
 client:
   address: http://delibird.store
+  order_result: http://delibird.store/thanks
 
 cookie:
   domain: .delibird.store
+
