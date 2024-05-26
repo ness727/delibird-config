@@ -32,15 +32,13 @@ services:
         ipv4_address: 172.18.0.101
 
   connect:
-    image: confluentinc/cp-kafka-connect:latest
+    image: ness727/my-custom-kafka-connect:latest
     container_name: connect
     hostname: connect
     ports:
       - 8083:8083
     depends_on:
       - kafka
-    volumes:
-      - ./lib./confluentinc-kafka-connect-jdbc-10.6.3./lib
     environment:
       CONNECT_BOOTSTRAP_SERVERS: kafka:9092
       CONNECT_REST_PORT: 8083
@@ -57,7 +55,7 @@ services:
       CONNECT_INTERNAL_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
       CONNECT_REST_ADVERTISED_HOST_NAME: "api.delibird.store"
       CONNECT_LOG4J_ROOT_LOGLEVEL: WARN
-      CONNECT_PLUGIN_PATH: "/usr/share/java,/etc/kafka-connect/jars"
+      CONNECT_PLUGIN_PATH: "/usr/share/java"
     networks:
       my-network:
         ipv4_address: 172.18.0.102
