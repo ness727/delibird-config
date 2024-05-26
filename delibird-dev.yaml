@@ -9,16 +9,24 @@ eureka:
     lease-renewal-interval-in-seconds: 1  # 실제 서비스 시에 제거
     lease-expiration-duration-in-seconds: 2  # 실제 서비스 시에 제거
 
+# spring:
+#   kafka:
+#     bootstrap-servers: 'http://api.delibird.store:9092'
 spring:
-  kafka:
-    bootstrap-servers: 'http://api.delibird.store:9092'
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers:
+            - http://api.delibird.store:9092
 
 token:
   secret: '{cipher}7eb8432793e7a109842874a5c5834619b2fd36398f170f9167957842cc41ca09ed49a91dea99bdf68863e367ae593ad4860d1dd6a7073af058b25b50c26b73a2'
-  expiration_time: 3600000
+  expiration_time: 21600000  # 6시간
 
 client:
   address: http://localhost:3000
+  order_result: http://delibird.store/thanks
 
 cookie:
   domain: .localhost
