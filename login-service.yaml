@@ -5,7 +5,7 @@ spring:
         registration: #registration
           naver:
             client-name: naver
-            redirect-uri: http://api.delibird.store/login/oauth2/code/naver
+            redirect-uri: https://api.delibird.store/login/oauth2/code/naver
             authorization-grant-type: authorization_code
             scope:
               - name
@@ -14,7 +14,7 @@ spring:
             client-secret: '{cipher}08e0f724ab9017a9a97f9c7d56c8159502faa5128087ad4fa2758e7bb43f4471'
           kakao:
             client-name: kakao
-            redirect-uri: http://api.delibird.store/login/oauth2/code/kakao
+            redirect-uri: https://api.delibird.store/login/oauth2/code/kakao
             authorization-grant-type: authorization_code
             client-authentication-method: client_secret_post
             scope:
@@ -24,7 +24,7 @@ spring:
             client-secret: '{cipher}2a402528266f91d83143f97e9bd22296c9b40634b995830f02f01e07b6339f34145d46fcd04af1b6d8dd2d15240f9a99a4462be162c1c64873d9fc3fe2e27d09'
           google:
             client-name: google
-            redirect-uri: http://api.delibird.store/login/oauth2/code/google
+            redirect-uri: https://api.delibird.store/login/oauth2/code/google
             authorization-grant-type: authorization_code
             scope:
               - profile
