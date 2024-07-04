@@ -18,7 +18,7 @@ spring:
       kafka:
         binder:
           brokers:
-            - http://api.delibird.store:9092
+            - http://localhost:9092
 
 token:
   secret: '{cipher}7eb8432793e7a109842874a5c5834619b2fd36398f170f9167957842cc41ca09ed49a91dea99bdf68863e367ae593ad4860d1dd6a7073af058b25b50c26b73a2'
