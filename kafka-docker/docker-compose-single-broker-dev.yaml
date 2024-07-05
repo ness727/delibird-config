@@ -1,0 +1,68 @@
+version: '2'
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    hostname: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    networks:
+      my-network:
+        ipv4_address: 172.18.0.100
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    hostname: kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: 172.18.0.101
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://:9092
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - zookeeper
+    networks:
+      my-network:
+        ipv4_address: 172.18.0.101
+
+  connect:
+    image: ness727/my-custom-kafka-connect:latest
+    container_name: connect
+    hostname: connect
+    ports:
+      - "8083:8083"
+    depends_on:
+      - kafka
+      - zookeeper
+    environment:
+      CONNECT_BOOTSTRAP_SERVERS: kafka:9092
+      CONNECT_REST_PORT: 8083
+      CONNECT_GROUP_ID: "quickstart-avro"
+      CONNECT_CONFIG_STORAGE_TOPIC: "quickstart-avro-config"
+      CONNECT_OFFSET_STORAGE_TOPIC: "quickstart-avro-offsets"
+      CONNECT_STATUS_STORAGE_TOPIC: "quickstart-avro-status"
+      CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      CONNECT_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      CONNECT_INTERNAL_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      CONNECT_INTERNAL_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      CONNECT_REST_ADVERTISED_HOST_NAME: "connect"
+      CONNECT_LOG4J_ROOT_LOGLEVEL: WARN
+      CONNECT_PLUGIN_PATH: "/usr/share/java"
+      CONNECT_ZOOKEEPER_CONNECT: "zookeeper:2181"
+    networks:
+      my-network:
+        ipv4_address: 172.18.0.102
+
+networks:
+  my-network:
+    external: true
+    name: delibird-network
