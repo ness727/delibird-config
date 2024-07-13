@@ -64,6 +64,8 @@ services:
     networks:
       my-network:
         ipv4_address: 172.18.0.102
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
 networks:
   my-network:
