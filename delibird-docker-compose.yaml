@@ -17,7 +17,7 @@ services:
     networks:
       - my-network
     environment:
-      spring.kafka.bootstrap-servers: http://api.delibird.store:8888
+      spring.kafka.bootstrap-servers: http://api.delibird.store:9092
 
   gateway-service:
     image: ness727/gateway-service:1.0
